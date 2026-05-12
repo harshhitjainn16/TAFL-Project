@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FSM Navigator — Game UI Navigation Mapper</title>
+  <meta name="description" content="Interactive Finite State Machine builder and analyzer for game UI navigation mapping.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <header id="app-header">
+    <h1>FSM Navigator</h1>
+    <span class="subtitle">Game UI Navigation Mapper</span>
+  </header>
+  <main id="panels">
+    <aside id="left-panel" class="panel">
+      <h2>FSM Builder</h2>
+      <div id="builder-controls"></div>
+    </aside>
+    <section id="center-panel" class="panel">
+      <div id="graph-toolbar"></div>
+      <svg id="fsm-canvas"></svg>
+    </section>
+    <aside id="right-panel" class="panel">
+      <h2>Analysis</h2>
+      <div id="analysis-output"></div>
+    </aside>
+  </main>
+</div>
+
+<!-- Export Modal -->
+<div id="modal-overlay" class="hidden">
+  <div id="modal-box">
+    <button id="modal-close">&times;</button>
+    <pre id="modal-content"></pre>
+    <button id="modal-copy">Copy to Clipboard</button>
+  </div>
+</div>
+
+<!-- Application Scripts (ES Modules) -->
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
